@@ -1,6 +1,3 @@
-Here is the extracted problem statement in Markdown format:
-
-```markdown
 # Problem F. Funds and Exchange
 
 ### Input File: `standard input`  
