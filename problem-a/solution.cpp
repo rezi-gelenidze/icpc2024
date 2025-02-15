@@ -41,18 +41,12 @@ int main() {
     // now let's be greedy
     int result = 0;
 
-    int used_triples = min(k, triple_occurances);
-    k -= used_triples;
-    result += used_triples;
-
-    int used_doubles = min(k, double_occurances);
-    k -= used_doubles;
-    result += used_doubles;
-
-    int used_singles = min(k, single_occurances);
-    k -= used_singles;
-    result += used_singles;
-
+    for (auto occurance : {triple_occurances, double_occurances, single_occurances}) {
+        int used = min(k, occurance);
+        k -= used;
+        result += used;
+    }
+    
     cout << result << endl;
     
     return 0;
